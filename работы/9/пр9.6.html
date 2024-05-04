@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Простейшая галерея изображений</title>
+    <script>
+        var array = new Array( //массив с изображения
+        '1.jpg',
+        '2.jpg',
+        '3.jpg'
+        );
+        var i = 0; 
+        function left() { // функция для смены изображений влево
+            var image = document.getElementById('rotatorbutton');
+            i--;
+            if (i<0) i =array.length - 1;
+            image.src = array[i];
+        }
+        function right(){ // функция для смены изображений вправо
+            var image = document.getElementById('rotatorbutton');
+            i++;
+            if (i == array.length) i=0;
+            image.src = array[i];
+
+        }
+    </script>
+</head>
+<body>
+    <center>
+        <h2>Простейшая галерея изображений</h2>
+    </center>
+    <table align="center">
+        <tr>
+            <td>
+                <!--кнопка смены изображений влево, т е назад-->
+                <input type="button" name="left" value="<" onclick="left()">
+            </td>
+            <td>
+                <!--вывести через скрипт изображение из массива с указанными размерами-->
+                <script>
+                document.write ("<img id='rotatorbutton' src="+ array[0] +" width='400' height='400'>");
+                </script>
+            </td>
+            <td>
+                <!--ены изображения вправо, т е вперёд-->
+                <input type="button" name="right" value=">" onclick="right()">
+
+            </td>
+        </tr>
+
+    </table>
+</body>
+</html>

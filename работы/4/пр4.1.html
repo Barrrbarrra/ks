@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Первое число: <b id="ch1"></b> <br>
+    Второе число: <b id="ch2"></b> <br>
+    Третье число: <b id="ch3"></b> <br>
+    Ответ: <b id="ch4"></b> 
+    <script>
+var a=prompt('Введите первое число','');
+var b=prompt('Введите второе число','');
+var c=prompt('Введите третье число','');
+a=parseInt(a);
+b=parseInt(b);
+c=parseInt(c);
+
+function chislo(x,y,z) {
+    return (x-y)/z;
+    
+}
+
+var j=chislo(a,b,c);
+
+document.getElementById('ch1').innerHTML=a;
+document.getElementById('ch2').innerHTML=b;
+document.getElementById('ch3').innerHTML=c;
+document.getElementById('ch4').innerHTML=j;
+    </script>
+</body>
+</html>

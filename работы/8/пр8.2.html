@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <b>Растительные продукты:</b>
+    <ol type="I">
+    <li>Фрукты: <a href="https://ru.wikipedia.org/wiki/Категория:Фрукты">Фрукты</a></li>
+    <ul type="square">
+        <li><u>Яблоки</u> </li>
+        <li><u>Груши</u> </li>
+        <li><u>Бананы</u> </li>
+    </ul>
+    <li id="list"><b>Овощи:</b> <a href="https://ru.wikipedia.org/wiki/Овощи">Овощи</a></li>
+    <ul type="circle" id="kar">
+        <li><u>Помидоры</u> </li>
+        <li ><u>Картошка</u> </li>
+    </ul>
+    </ol>
+
+<br>
+<script>
+    oList=document.getElementById('list');
+document.write('Родительский элемент тега li: ' + oList.parentElement.nodeName + '<br>')
+document.write('Дочерний элемент тега li: ' + oList.children[0].nodeName + '<br>')
+document.write('Первый дочерний элемент тега li: ' + oList.firstElementChild.nodeName + '<br>')
+document.write('Последний дочерний элемент тега li: ' + oList.lastElementChild.nodeName + '<br>')
+document.write('Предыдуший сестренский элемент тега li: ' + oList.previousElementSibling.nodeName + '<br>')
+document.write('Последующий сестренский элемент тега li: ' + oList.nextElementSibling.nodeName + '<br>')
+
+var o=document.getElementById('kar');
+newItem = document.createElement('LI'); //создаём li
+newText = document.createTextNode ('Огурцы'); //создаём огурец
+newItem.appendChild(newText);
+o.appendChild(newItem);
+o.removeChild(o.children[1]); //удаляем
+</script>
+
+</body>
+</html>

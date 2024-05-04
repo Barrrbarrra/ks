@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Исходный массив: <b id="mas1"></b> <br>
+    Новый массив: <b id="mas2"></b>
+    <script>
+var b=prompt('Введите мужское имя','');
+var e=prompt('Введите мужское имя',''); //ввод имён
+var a=['Коля','Петя']; //описание массива
+document.getElementById('mas1').innerHTML=a; //выводим исходный массив
+a.splice(1, 0, b, e); //вставляем имена после первого элемента
+document.getElementById('mas2').innerHTML=a; //ввыводим получившийся массив
+
+    </script>
+</body>
+</html>

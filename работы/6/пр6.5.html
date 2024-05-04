@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Список элементов массива: <b id='mas'></b> <br>
+    Длина массива: <b id='dl'></b> <br>
+    <b id="ch"></b> элемент массива имеет значение: <b id='ele'></b> <br>
+    <script> 
+    var b=prompt('Сколько чисел будем вводить', '');
+        var a=new Array(); //описание массива
+for( var i=0; i<b; i++){
+var c=prompt ('Введите число:','');
+a[i]=c; 
+}
+document.getElementById('mas').innerHTML=a;
+var f=a.length;                            //длина
+document.getElementById('dl').innerHTML=f;
+var h=prompt('Какой элемент будем выводить?','');
+document.getElementById('ch').innerHTML=h;
+document.getElementById('ele').innerHTML=a[h-1];
+
+    </script>
+</body>
+</html>

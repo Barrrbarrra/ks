@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      var newElem=document.createElement('table'); //создание элемента таблицы
+      newElem.setAttribute('width','50%'); //ширина таблицы 50% от ширины окна браузера
+      newElem.border='1'; //толщина рамки 1 пиксель
+      var newRow1=newElem.insertRow(0); //создание первой строки, нумерация с 0
+      var newCell=newRow1.insertCell(0); //создание первой ячейки в первой строке, нумерация с 0
+      newCell.width='200'; //ширина ячейки 200 пикселей
+      newCell.innerHTML='строка 1 ячейка 1'; //добавление текса в первую ячейку первой строки
+      var newCell2=newRow1.insertCell(1); //создание второй ячейки в первой строке
+      newCell2.width='200';
+      newCell2.innerHTML='строка 1 ячейка 2'; //добавление текста во вторую ячейку первой строки
+      var newRow2=newElem.insertRow(1);//создание второй строки
+      var newCell3=newRow2.insertCell(0); //создание первой ячейки во второй строке
+      newCell3.setAttribute('colSpan','2');//объединение пго горизонтали
+      newCell3.align='center';
+      newCell3.innerHTML='строка 2 ячека 1';
+      document.body.appendChild(newElem);//добавление таблицы в иерархическую структуру
+    </script>
+</body>
+</html>

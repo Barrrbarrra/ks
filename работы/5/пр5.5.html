@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Строка 1: Считается, что пингвины появились в эпоху динозавров. <br>
+    Кол-во символов в 1-ой строке: <b id="st1"></b> <br><br>
+
+    Строка 2: Пингвины обладают способностью выпрыгивать из воды. <br>
+    Кол-во символов во 2-ой строке: <b id="st2"></b> <br><br>
+
+    Результат сравнения: <b>1 строка > 2 строка</b> 
+    <script>
+    var a="Считается, что пингвины появились в эпоху динозавров.".length;
+
+    var b="Пингвины обладают способностью выпрыгивать из воды.".length;
+
+    document.getElementById('st1').innerHTML=a;
+    document.getElementById('st2').innerHTML=b;
+    </script>
+</body>
+</html>

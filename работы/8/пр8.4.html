@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <h3>Работа с окнами</h3>
+    <script>
+//создать переменную, в которой будет храниться ссылку на объект window открытого окна 
+var myWindow;
+function myWindowOpen () {
+myWindow = window.open ("http://yandex.ru", "myWindow", "top=250 left=250 width=250 height=250");
+}
+
+function myWindowClose (){
+    if (myWindow){ //если myWindow открыто
+    myWindow.close(); //то myWindow закрыть
+    myWindow=null; //иначе myWindow присвоить значение неизвестно
+    }
+}
+    </script>
+
+    <button onClick="myWindowOpen()"> Открыть окно</button>
+    <button onClick="myWindowClose()">Закрыть окно</button>
+
+</body>
+</html>

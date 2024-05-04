@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Смена размеров изображений при клике</title>
+    <script>
+        var bigsize = '300'; //размер большой картинки
+        var smallsize = '150'; // размер маленькой картинки
+        function changeSizeImage (im) { // функция смены изображения
+            if (im.height == bigsize)
+            im.height = smallsize;
+            else im.height = bigsize;
+        }
+    </script>
+</head>
+<body>
+    <table align="center">
+        <tr>
+            <td align="center">
+                <img src="1.jpg" height="150" onclick="changeSizeImage(this)">
+                <br>
+                <b> Изображение 1</b>
+            </td>
+            <td align="center">
+                <img src="2.jpg" height="150" onclick="changeSizeImage(this)">
+                <br>
+                <b> Изображение 2</b>
+            </td>
+        </tr>
+
+    </table>
+</body>
+</html>

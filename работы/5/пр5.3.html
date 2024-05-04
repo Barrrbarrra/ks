@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Дано слово - <b>анкетирование</b> <br>
+    Первое слово - <b id="sl1"></b> <br>
+    Второе слово - <b id="sl2"></b> <br>
+    Третье слово - <b id="sl3"></b> <br>
+    Четвёртое слово - <b id="sl4"></b> <br>
+    Пятое слово - <b id="sl5"></b> <br>
+    <script>
+    var a='анкетирование';
+
+    var b=a.slice(0,5); //анкет
+    var c=a.substr(9,1); //а
+    var d=b.concat(c); //анкета
+
+    var e=a.substr(6,1); //р
+    var f=a.substr(0,1); //а
+    var g=a.slice (2,5); //кет
+    var j=a.substr(9,1); //а
+    var y=e.concat(f,g,j); //ракета
+
+    var r=a.substr(2,1); //к
+    var s=a.substr(5,1); //и
+    var w=a.substr(4,1); //т
+    var h=r.concat(s,w); //кит
+
+    var k=a.slice(4,7); //тир
+
+    var u=a.substr(4,1); //т
+    var p=a.slice(7,10); //ова
+    var t=a.substr(6,1); //р
+    var l=u.concat(p,t); //товар
+
+
+    document.getElementById('sl1').innerHTML=d;
+    document.getElementById('sl2').innerHTML=y;
+    document.getElementById('sl3').innerHTML=h;
+    document.getElementById('sl4').innerHTML=k;
+    document.getElementById('sl5').innerHTML=l;
+
+    </script>
+</body>
+</html>

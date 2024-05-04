@@ -1,0 +1,42 @@
+<body>
+    Данн массив: <b id="m1"></b><br>
+    Задание 4.1: <b id="m2"></b><br>
+    Задание 4.2: <b id="m3"></b><br>
+    Задание 4.3: <b id="m4"></b><br>
+    Задание 4.4: <b id="m5"></b><br>
+    Задание 4.5: <b id="m6"></b><br>
+    Задание 4.6: <b id="m7"></b><br>
+    <script>
+        var a=['веб-дизайн','математика','программирование','русский язык','литература','химия'];
+        document.getElementById('m1').innerHTML=a;
+       
+        var b=['анатомия'];
+        
+        var c=['компьютерные сети'];
+        var d=['педагогика'];
+        var e=['психология'];
+        var f=['обществознание'];
+       
+        a1=a.splice(0,1); //Делим массив a на составляющие
+        a2=a.slice(0,1);
+        a3=a.slice(1,2);
+        a4=a.slice(2,3);
+        a5=a.slice(3,4);
+        a6=a.slice(4,5);
+        
+        a7=a1.concat(b,a2,c,a3,d,a4,e,a5,f,a6);// Объединяем новые элементы с элементами массива a
+        document.getElementById('m2').innerHTML=a7; 
+        
+        document.getElementById('m3').innerHTML=a7.sort();// Сортируем Новый массив по алфавиту
+      
+        a8=a1.concat(a3,d,e);  // Убераем не нужные элементы и выводим на экран
+        document.getElementById('m4').innerHTML=a8;
+        
+        document.getElementById('m5').innerHTML=a8.join('|');// Разделяем массивы Вертикальной чертой '|'
+       
+        a9=a1.concat(e); // Убираем не нужное и выводим первый и последний элемент
+        document.getElementById('m6').innerHTML=a9;
+       
+        document.getElementById('m7').innerHTML=a9.length; // Считаем кол-во элементов
+    </script>
+</body>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Расписание уроков:</h3>
+
+    <ol type="1" id="pred">
+        <li>Программирование</li>
+        <li>Математика</li>
+        <li>Информатика</li>
+        <li>Физическая культура</li>
+    </ol>
+
+    <script>
+    var oPred=document.getElementById('pred');
+
+    newItem5 = document.createElement('LI');
+newText5 = document.createTextNode ('Русский язык'); 
+newItem5.appendChild(newText5);
+oPred.appendChild(newItem5) //добавление Русский язык
+
+        
+newItem = document.createElement('LI');
+newText = document.createTextNode ('Веб-дизайн');
+newItem.appendChild(newText);
+oPred.appendChild(newItem); // создание
+curItem=oPred.children[2]; //обращение к 3 строке
+oPred.insertBefore(newItem,curItem) //добавление веб-дизайн
+
+oPred.removeChild(oPred.children[4]); //удаляем
+
+    </script>
+
+</body>
+</html>

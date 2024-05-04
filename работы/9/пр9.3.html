@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a=0; //переменная a хранит номер первого изображения, её номер 0
+        function changeImage() {  //функция для смены изображения
+            if(a==0){  //если номер изображения равен 0, то загружаем первую картинку
+                document.img.src='1.jpg';
+                a=1; //пересохраняем а на второе изображение под номером 1
+
+            }
+            else{ //если номер изображения равен 1, то загружаем 2 картинку
+                document.img.src='2.jpg'; 
+                a=0; //пересохраняем а на первое изображение под номером 0
+            }
+        }
+    </script>
+
+    <!--кнопка Сменить изображение-->
+    <button onclick="changeImage()">Сменить изображение</button>
+    <br>
+    <!--загружено первое изображение по умолчанию-->
+    <img src="1.jpg" name="img" width="350">
+
+</body>
+</html>

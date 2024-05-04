@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Повторение с помощью функции setTimeout</title>
+    <script>
+       var k=1; //переменная k отвечает за номер изображения, присвоена 1
+       function ref() {  //функция остановки смены изображения
+        k=6;
+       } 
+       function succpict(){ //функция для выбора изображения
+        var d = document;
+        if(k <= 5) {
+            if (k == 1) { d.mypict.src ='1.jpg'; k++ }
+            else if (k == 2) { d.mypict.src ='2.jpg'; k++ }
+            else if (k == 3) { d.mypict.src ='3.jpg'; k++ }
+            else if (k == 4) { d.mypict.src ='4.jpg'; k++ }
+            else if (k == 5) { d.mypict.src ='5.jpg'; k++ }
+            setTimeout ('succpict ()' , 2000); //смена изображений через 2 секунды
+        }
+       }
+    </script>
+</head>
+<body onload="succpict()"> <!--при загруки веб-страницы запускается функция выбора изображений-->
+    <p> Просмотр рисунков</p>
+    <img src="1.jpg" name="mypict" width="300">
+    <form>
+        <input type="reset" value="Остановить" onclick="ref();">  <!--кнопка остановки смены изображений-->
+        <input type="button" value="Начать снова" onclick="k=1; succpict();">  <!--кнопка Начать показ изображений снова-->
+    </form>
+</body>
+</html>

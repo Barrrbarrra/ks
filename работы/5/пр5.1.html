@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Исходное слово - <b>информатика</b><br>
+    Первое слово - <b id="sl1"></b> <br>
+    Второе слово - <b id="sl2"></b> <br>
+    Третье слово - <b id="sl3"></b>
+    <script>
+var a='информатика';
+var b=a.slice(2,7); // форма
+var x=a.substr(9,1); // к
+var y=a.substr(3,1); // о
+var z=a.substr(7,1); // т
+var c=x.concat(y,z); // кот
+var d=a.substr(2,1); // ф
+var e=a.substr(0,1); //и
+var f=a.slice(4,7); // рма
+var j=d.concat(e,f); // фирма
+
+document.getElementById('sl1').innerHTML=b;
+document.getElementById('sl2').innerHTML=c;
+document.getElementById('sl3').innerHTML=j;
+    </script>
+</body>
+</html>
